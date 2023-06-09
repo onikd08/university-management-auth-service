@@ -1,0 +1,24 @@
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-06T05:03:47.315Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-06T05:03:47.325Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-06T05:05:00.402Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-06T05:05:00.411Z'
+}

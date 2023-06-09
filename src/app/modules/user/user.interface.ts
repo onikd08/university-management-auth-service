@@ -1,8 +1,10 @@
+import { Model } from 'mongoose'
+
 // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-interface IUser {
+export interface IUser {
   id: string
   role: string
   password: string
 }
 
-export default IUser
+export type UserModel = Model<IUser, Record<string, unknown>>

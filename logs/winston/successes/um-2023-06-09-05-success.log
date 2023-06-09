@@ -1,0 +1,108 @@
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:37:00.752Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:37:00.765Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:39:21.353Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:39:21.362Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:40:37.602Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:40:37.610Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:41:35.227Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:41:35.239Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:42:16.264Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:42:16.284Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:48:18.310Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:48:18.320Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:49:26.854Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:49:26.861Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:54:24.300Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:54:24.310Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:54:54.074Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T02:54:54.085Z'
+}
