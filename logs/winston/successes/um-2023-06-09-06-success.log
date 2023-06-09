@@ -202,3 +202,27 @@
   label: 'University Management',
   timestamp: '2023-06-09T03:48:12.518Z'
 }
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T03:57:06.288Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T03:57:06.297Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-09T03:58:13.344Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-09T03:58:13.352Z'
+}
