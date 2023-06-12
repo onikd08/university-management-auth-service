@@ -1,0 +1,55 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/.638752cc69bc107bd0c261fec5c7269285095b57-audit.json",
+    "files": [
+        {
+            "date": 1686021482124,
+            "name": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/um-2023-06-06-06-error.log",
+            "hash": "40552dba3ec8a4dba7b751f6e9f89256ded0c220849ac17c7db7da78c3fc5166"
+        },
+        {
+            "date": 1686027826830,
+            "name": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/um-2023-06-06-08-error.log",
+            "hash": "36abe5e8185f4826c23646068c31bd5a10b8d8ecca613ffa8f5d5d59f14db2bf"
+        },
+        {
+            "date": 1686091212048,
+            "name": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/um-2023-06-07-01-error.log",
+            "hash": "f93e4fb1f37fb2f1bfe698e969fd98ede3195d0736723850cbafa860e63d77fd"
+        },
+        {
+            "date": 1686092622625,
+            "name": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/um-2023-06-07-02-error.log",
+            "hash": "9a6e023cdf5bfa0faeb9e70d5dc557d633dc5a80209b5ee8baccca533909e65d"
+        },
+        {
+            "date": 1686096589486,
+            "name": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/um-2023-06-07-03-error.log",
+            "hash": "30cabbc1340b66f457ba326871e0e807a7074e236d49f06992828690efd40eb8"
+        },
+        {
+            "date": 1686278220297,
+            "name": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/um-2023-06-09-05-error.log",
+            "hash": "8ed73ff940b6b5c01dc7280315876a50712d4f83ca27e4ffbf7033946225fbf9"
+        },
+        {
+            "date": 1686279634254,
+            "name": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/um-2023-06-09-06-error.log",
+            "hash": "b1a019284abe51d115afb227156338d2c326d5b21c4ee45af5835d1566dd0c23"
+        },
+        {
+            "date": 1686283235868,
+            "name": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/um-2023-06-09-07-error.log",
+            "hash": "a7bdf12ba39d41b697709e1c278fefa353ba0f0e1c5e29aae1ff42e4efce8288"
+        },
+        {
+            "date": 1686539807663,
+            "name": "/Users/onikd08/Desktop/next-level/university-management-auth-service/logs/winston/errors/um-2023-06-12-06-error.log",
+            "hash": "d06e0c586e01d0d8688f5b124adcf83153f0baf436fa40b4517aa972eacfccb7"
+        }
+    ],
+    "hashType": "sha256"
+}
