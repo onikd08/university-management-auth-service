@@ -118,3 +118,15 @@
   label: 'University Management',
   timestamp: '2023-06-12T03:30:03.434Z'
 }
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-12T03:52:34.550Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-12T03:52:34.563Z'
+}

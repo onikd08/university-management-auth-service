@@ -1,0 +1,6 @@
+{
+  level: 'error',
+  label: 'University Management',
+  timestamp: '2023-06-12T04:26:32.834Z'
+}
+Mon Jun 12 2023 7:27:36  [University Management] error: Testing error
