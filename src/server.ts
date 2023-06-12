@@ -4,6 +4,17 @@ import config from './config/index'
 import { logger, errorLogger } from './shared/logger'
 import { Server } from 'http'
 
+/*
+Uncaught exception handler:
+As the main() function is async, we have to handle uncaught 
+exceptions after the main() function call
+*/
+
+process.on('uncaughtException', () => {
+  console.log('Uncaught exception detected')
+  process.exit(1)
+})
+
 async function main() {
   let server: Server
   try {
@@ -30,3 +41,7 @@ async function main() {
 }
 
 main()
+
+//testing uncaught exception
+
+//console.log(x)
