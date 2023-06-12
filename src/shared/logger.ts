@@ -4,7 +4,7 @@ import DailyRotateFile from 'winston-daily-rotate-file'
 import path from 'path'
 import process from 'node:process'
 
-const { combine, timestamp, label, printf, prettyPrint } = format
+const { combine, timestamp, label, printf } = format
 
 const logFormat = printf(({ level, message, label, timestamp }) => {
   const date = new Date(timestamp)
@@ -19,8 +19,8 @@ const logger = createLogger({
   format: combine(
     label({ label: 'University Management' }),
     timestamp(),
-    logFormat,
-    prettyPrint()
+    logFormat
+    // prettyPrint()
   ),
   transports: [
     new transports.Console(),
@@ -45,8 +45,8 @@ const errorLogger = createLogger({
   format: combine(
     label({ label: 'University Management' }),
     timestamp(),
-    logFormat,
-    prettyPrint()
+    logFormat
+    // prettyPrint()
   ),
   transports: [
     new transports.Console(),

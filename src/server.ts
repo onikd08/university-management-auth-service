@@ -16,19 +16,12 @@ process.on('uncaughtException', error => {
   process.exit(1)
 })
 
-// SIGTERM
-process.on('SIGTERM', () => {
-  logger.info('SIGTERM is received')
-  if (server) {
-    server.close()
-  }
-})
 async function main() {
   try {
     await mongoose.connect(config.database_url as string)
     logger.info('Database connection successful')
     server = app.listen(config.port, () => {
-      logger.info('Server is running on port', config.port)
+      logger.info(`Server is running on port: ${config.port}`)
     })
   } catch (error) {
     errorLogger.error(error)
@@ -49,6 +42,10 @@ async function main() {
 
 main()
 
-//testing uncaught exception
-
-//console.log(x)
+// SIGTERM
+process.on('SIGTERM', () => {
+  logger.info('SIGTERM is received')
+  if (server) {
+    server.close()
+  }
+})

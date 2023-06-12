@@ -1,0 +1,41 @@
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-12T04:22:32.233Z'
+}
+{
+  level: 'info',
+  message: 'Server is running on port',
+  label: 'University Management',
+  timestamp: '2023-06-12T04:22:32.242Z'
+}
+{
+  message: 'SIGTERM is received',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-12T04:23:07.084Z'
+}
+{
+  message: 'Database connection successful',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-12T04:24:28.715Z'
+}
+{
+  message: 'Server is running on port: 8000',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-12T04:24:28.722Z'
+}
+{
+  message: 'Unhandled error detected, closing server',
+  level: 'info',
+  label: 'University Management',
+  timestamp: '2023-06-12T04:24:34.496Z'
+}
+Mon Jun 12 2023 7:27:15  [University Management] info: Database connection successful
+Mon Jun 12 2023 7:27:15  [University Management] info: Server is running on port: 8000
+Mon Jun 12 2023 7:27:21  [University Management] info: Unhandled error detected, closing server
+Mon Jun 12 2023 7:29:43  [University Management] info: Database connection successful
+Mon Jun 12 2023 7:29:43  [University Management] info: Server is running on port: 8000
