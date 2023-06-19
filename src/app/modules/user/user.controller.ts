@@ -10,7 +10,6 @@ const createUser = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const { user } = req.body;
     const result = await UserService.createUser(user);
-    next();
 
     const responseData: IApiResponse<IUser> = {
       success: true,
@@ -19,6 +18,7 @@ const createUser = catchAsync(
       data: result,
     };
     sendResponse(res, responseData);
+    next();
   }
 );
 

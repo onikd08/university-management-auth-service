@@ -12,7 +12,6 @@ const createSemester = catchAsync(
     const result = await AcademicSemesterService.createSemester(
       academicSemesterData
     );
-    next();
 
     const responseData: IApiResponse<IAcademicSemester> = {
       success: true,
@@ -22,6 +21,7 @@ const createSemester = catchAsync(
     };
 
     sendResponse(res, responseData);
+    next();
   }
 );
 
