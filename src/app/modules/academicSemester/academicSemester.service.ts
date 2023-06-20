@@ -1,7 +1,10 @@
 import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
 import { academicSemesterTitleCodeMapper } from './academicSemester.constant';
-import { IAcademicSemester } from './academicSemester.interface';
+import {
+  AcademicSemesterFilters,
+  IAcademicSemester,
+} from './academicSemester.interface';
 import { AcademicSemester } from './academicSemester.model';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import { IGenericResponse } from '../../../interfaces/common';
@@ -19,8 +22,53 @@ const createSemester = async (
 };
 
 const getAllSemesters = async (
+  filters: AcademicSemesterFilters,
   paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
+  const { searchTerm } = filters;
+
+  const andConditions = [];
+  const academicSemesterSearchableFields = ['title', 'code', 'year'];
+
+  if (searchTerm) {
+    andConditions.push({
+      $or: academicSemesterSearchableFields.map(field => {
+        return {
+          [field]: {
+            $regex: searchTerm,
+            $options: 'i',
+          },
+        };
+      }),
+    });
+  }
+
+  /*
+  const andConditions = [
+    {
+      $or: [
+        {
+          title: {
+            $regex: searchTerm,
+            $options: 'i',
+          },
+        },
+        {
+          code: {
+            $regex: searchTerm,
+            $options: 'i',
+          },
+        },
+        {
+          year: {
+            $regex: searchTerm,
+            $options: 'i',
+          },
+        },
+      ],
+    },
+  ];
+*/
   const { page, skip, limit, sortBy, sortOrder } =
     paginationHelpers.calculatePagination(paginationOptions);
 
@@ -29,7 +77,7 @@ const getAllSemesters = async (
   if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
   }
-  const result = await AcademicSemester.find()
+  const result = await AcademicSemester.find({ $and: andConditions })
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
