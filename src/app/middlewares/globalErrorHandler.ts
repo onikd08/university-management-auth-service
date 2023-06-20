@@ -9,7 +9,7 @@ import { errorLogger } from '../../shared/logger';
 import { ZodError } from 'zod';
 import handleZodError from '../../errors/handleZodError';
 
-const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
+const globalErrorHandler: ErrorRequestHandler = (error, req, res) => {
   config.env === 'development'
     ? console.log('Global Error Handler', { error })
     : errorLogger.error('Global Error Handler', error);
@@ -56,7 +56,7 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
     errorMessages,
     stack: config.env === 'development' ? error?.stack : undefined,
   });
-  next();
+  //next();
 };
 
 export default globalErrorHandler;
