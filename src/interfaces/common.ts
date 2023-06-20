@@ -13,12 +13,12 @@ export type IApiResponse<T> = {
   statusCode: number;
   success: boolean;
   message?: string | null;
-  meta: {
+  meta?: {
     page: number;
     limit: number;
     total: number;
   };
-  data: T | null;
+  data?: T | null;
 };
 
 export type IGenericResponse<T> = {
