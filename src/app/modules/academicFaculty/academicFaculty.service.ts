@@ -19,8 +19,20 @@ const getSingleFaculty = async (
   const result = await AcademicFaculty.findById(id);
   return result;
 };
+
+const updateFaculty = async (
+  id: string,
+  payload: IAcademicFaculty
+): Promise<IAcademicFaculty | null> => {
+  const result = await AcademicFaculty.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  });
+  return result;
+};
+
 export const AcademicFacultyService = {
   createFaculty,
   getAllFaculties,
   getSingleFaculty,
+  updateFaculty,
 };
