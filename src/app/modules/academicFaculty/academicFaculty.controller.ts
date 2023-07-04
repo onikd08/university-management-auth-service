@@ -22,6 +22,35 @@ const createFaculty = catchAsync(async (req: Request, res: Response) => {
   sendResponse(res, responseData);
 });
 
+const getAllFaculties = catchAsync(async (req: Request, res: Response) => {
+  const result = await AcademicFacultyService.getAllFaculties();
+
+  const responseData: IApiResponse<IAcademicFaculty[]> = {
+    success: true,
+    statusCode: httpStatus.OK,
+    message: 'All Academic Faculties retrieved successfully',
+    data: result,
+  };
+
+  sendResponse(res, responseData);
+});
+
+const getSingleFaculty = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await AcademicFacultyService.getSingleFaculty(id);
+
+  const responseData: IApiResponse<IAcademicFaculty> = {
+    success: true,
+    statusCode: httpStatus.OK,
+    message: 'All Academic Faculties retrieved successfully',
+    data: result,
+  };
+
+  sendResponse(res, responseData);
+});
+
 export const AcademicFacultyController = {
   createFaculty,
+  getAllFaculties,
+  getSingleFaculty,
 };
