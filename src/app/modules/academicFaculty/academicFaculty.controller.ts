@@ -5,6 +5,9 @@ import { IApiResponse } from '../../../interfaces/common';
 import { IAcademicFaculty } from './academicFaculty.interface';
 import httpStatus from 'http-status';
 import sendResponse from '../../../shared/sendResponse';
+import pick from '../../../shared/pick';
+import { academicFacultyFilterableFields } from './academicFaculty.constants';
+import { paginationFields } from '../../../constants/pagination';
 
 const createFaculty = catchAsync(async (req: Request, res: Response) => {
   const { ...academicFacultyData } = req.body;
@@ -23,13 +26,20 @@ const createFaculty = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllFaculties = catchAsync(async (req: Request, res: Response) => {
-  const result = await AcademicFacultyService.getAllFaculties();
+  const filters = pick(req.query, academicFacultyFilterableFields);
+  const paginationOptions = pick(req.query, paginationFields);
+
+  const result = await AcademicFacultyService.getAllFaculties(
+    filters,
+    paginationOptions
+  );
 
   const responseData: IApiResponse<IAcademicFaculty[]> = {
     success: true,
     statusCode: httpStatus.OK,
     message: 'All Academic Faculties retrieved successfully',
-    data: result,
+    data: result.data,
+    meta: result.meta,
   };
 
   sendResponse(res, responseData);
