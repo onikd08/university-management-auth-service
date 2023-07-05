@@ -13,10 +13,9 @@ const getAllDepartments = async (
   filters: IAcademicDepartmentFilters,
   paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicDepartment[]>> => {
-  const { limit, page, skip, sortBy, sortOrder } =
-    paginationHelpers.calculatePagination(paginationOptions);
-
   const { searchTerm, ...filtersData } = filters;
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelpers.calculatePagination(paginationOptions);
 
   const andConditions = [];
 
@@ -25,12 +24,11 @@ const getAllDepartments = async (
       $or: academicDepartmentSearchableFields.map(field => ({
         [field]: {
           $regex: searchTerm,
-          $paginationOptions: 'i',
+          $options: 'i',
         },
       })),
     });
   }
-
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
@@ -48,7 +46,6 @@ const getAllDepartments = async (
     andConditions.length > 0 ? { $and: andConditions } : {};
 
   const result = await AcademicDepartment.find(whereConditions)
-    .populate('academicFaculty')
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
