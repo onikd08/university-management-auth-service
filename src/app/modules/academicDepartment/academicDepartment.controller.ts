@@ -5,10 +5,15 @@ import { IApiResponse } from '../../../interfaces/common';
 import { IAcademicDepartment } from './academicDepartment.interface';
 import httpStatus from 'http-status';
 import sendResponse from '../../../shared/sendResponse';
+import pick from '../../../shared/pick';
+import { academicDepartmentFilterableFields } from './academicDepartment.constants';
+import { paginationFields } from '../../../constants/pagination';
 
 const createDepartment = catchAsync(async (req: Request, res: Response) => {
-  const payload = req.body;
-  const result = await AcademicDepartmentService.createDepartment(payload);
+  const { ...academicDepartmentData } = req.body;
+  const result = await AcademicDepartmentService.createDepartment(
+    academicDepartmentData
+  );
 
   const responseData: IApiResponse<IAcademicDepartment> = {
     success: true,
@@ -20,13 +25,20 @@ const createDepartment = catchAsync(async (req: Request, res: Response) => {
 });
 
 const getAllDepartments = catchAsync(async (req: Request, res: Response) => {
-  const result = await AcademicDepartmentService.getAllDepartments();
+  const filters = pick(req.query, academicDepartmentFilterableFields);
+  const paginationOptions = pick(req.query, paginationFields);
+
+  const result = await AcademicDepartmentService.getAllDepartments(
+    filters,
+    paginationOptions
+  );
 
   const responseData: IApiResponse<IAcademicDepartment[]> = {
     statusCode: httpStatus.OK,
     success: true,
     message: 'All Departments retrieved successfully',
-    data: result,
+    data: result.data,
+    meta: result.meta,
   };
   sendResponse(res, responseData);
 });
